@@ -1,11 +1,18 @@
-footer{
+.footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 128px;
 }
 
-footer h5{
+.footer__caption,
+.footer__link {
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25em;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #009688;
+    transition: .2s ease;
 }
