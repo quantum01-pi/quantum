@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 import Header from '../../components/Header/index'
-import BgHome from '../../assets/img/bgHome.png'
+import Footer from '../../components/Footer/index'
 import BannerHome from '../../assets/img/bannerHome.png'
 import Mudas from '../../assets/img/mudas.jpg'
 import Laranja from '../../assets/img/laranja.jpg'
@@ -23,6 +23,7 @@ export default function Home() {
                     <img src={Laranja} alt=""/>
                     <img src={Graos} alt=""/>
                 </section>
+                <Footer/>
             </div>
         </>
     )

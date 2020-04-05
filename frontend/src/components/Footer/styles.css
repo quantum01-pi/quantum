@@ -1,0 +1,11 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 128px;
+}
+
+footer h5{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25em;
+}
