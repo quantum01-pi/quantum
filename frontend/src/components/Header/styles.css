@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 32px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.header__link{
+    font-size: 1.875em;
+    font-weight: 300;
+    text-decoration: none;
+    color: #FFFFFF;
+}
