@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/Home/index';
+import Search from './pages/Search/index';
 
 export default function App() {
   return (
