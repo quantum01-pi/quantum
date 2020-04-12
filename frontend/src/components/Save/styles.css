@@ -1,0 +1,13 @@
+
+.save {
+    cursor: pointer;
+}
+
+.save__icon {
+    display: block;
+    background-image: url('../../../src/assets/img/favoritar.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 30px;
+    text-indent: -9999px;
+}

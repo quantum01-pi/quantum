@@ -14,7 +14,7 @@ export default function App() {
     <Router>
         <Switch>
           <Route path="/">
-            <Home />
+            {/* <Home /> */}
             <Search/>
           </Route>
         </Switch>

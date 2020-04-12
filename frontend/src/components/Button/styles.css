@@ -1,0 +1,18 @@
+:root {
+    --default: #060606;
+}
+
+.button {
+    background-color: transparent;
+    box-shadow: none;
+    border: 3px solid var(--default);
+    padding: 10px;
+    width: 200px;
+    transition: .5s ease;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: var(--default);
+    color: #fff;
+}
