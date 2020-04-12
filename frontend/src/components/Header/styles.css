@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,7 @@
     z-index: 2;
 }
 
-.header__link{
+.header__link {
     font-size: 1.875em;
     font-weight: 300;
     text-decoration: none;

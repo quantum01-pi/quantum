@@ -4,6 +4,6 @@ import './styles.css'
 
 export default function Button() {
     return (
-    <button className="button">Solicitar Contato</button>
+        <button className="button">Solicitar Contato</button>
     )
 }

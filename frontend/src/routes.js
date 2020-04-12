@@ -7,14 +7,14 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/Home/index';
-import Search from './pages/Search/index';
+import Search from './pages/SearchPage/index';
 
 export default function App() {
   return (
     <Router>
         <Switch>
           <Route path="/">
-            {/* <Home /> */}
+            {/* <Home/> */}
             <Search/>
           </Route>
         </Switch>

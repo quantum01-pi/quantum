@@ -3,14 +3,31 @@
     --gray: #4D4D4D;
   }
 
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
+    margin: 10px;
     padding: 40px;
-    max-width: 300px;
+    max-width: 260px;
     height: auto;
     background-color: #fff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    color: #060606;
+    color: var(--gray);
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 1100px) {
+	.card {
+        margin: 0 0 20px 0;
+        width: auto;
+	}
 }
 
 .card__header {
@@ -32,6 +49,7 @@
 
 .card__category a {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .card__category strong {
@@ -40,6 +58,7 @@
 
 .card__gallery {
     font-size: .9em;
+    cursor: pointer;
 }
 
 .card__title {
