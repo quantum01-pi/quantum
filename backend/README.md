@@ -1,0 +1,1 @@
+Depois vou colocar aqui como rodar o projeto. 
