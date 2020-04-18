@@ -1,8 +1,10 @@
 import React from 'react'
 import './styles.css'
 
+// import Gallery from '../Gallery/index'
 import Button from '../../components/Button/index'
 import Save from '../../components/Save/index'
+
 
 
 export default function Card() {
