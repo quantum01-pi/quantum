@@ -9,11 +9,11 @@ export default function Header({tipo}) {
         <div className="container">
             <nav className="header">
                 {tipo == 'voltar' ?
-                    <Link to="#" className="header__link">Voltar</Link>
+                    <Link to="/" className="header__link">Voltar</Link>
                     :
                     <> 
-                    <Logo></Logo>
-                    <Link to="#" className="header__link">Login</Link>
+                        <Logo></Logo>
+                        <Link to="/auth" className="header__link">Login</Link>
                     </>
                 }
                 

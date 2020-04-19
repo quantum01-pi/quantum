@@ -1,42 +1,49 @@
-.bg-auth{
+.bg-auth {
     z-index: -1;
     position: absolute;
     width: 100vw;
-    filter: blur(30px);
+    filter: blur(30px) saturate(2);
     max-height: 100vh;
 }
 
-.loginBox{
+.loginBox {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
+    width: 300px;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.loginBox__button{
+
+.loginBox__button {
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: transparent;
     outline: none;
-    margin: none;
-    border: none;
-    height: 60px;
-    font-size: 32px;
+    border: 3px solid white;
+    font-size: 25px;
+    padding: 10px;
     font-family: poppins;
     margin-bottom: 18px;
     margin-top: 30px;
+    color: white;
+    transition: .5s ease;
+    cursor: pointer;
 }
 
-.loginBox__label{
-    font-size: 13px;
+.loginBox__button:hover {
+    background-color: white;
+    color: #222;
+}
+
+.loginBox__label { 
+    font-size: 12px;
     display: flex;
     width: 100%;
-    color: white;
-    margin-bottom: 18px;
+    color: #ffb100;
 }
 
 .loginBox__label:first-of-type{
@@ -46,23 +53,32 @@
 .loginBox__esqueceuSenha{
     text-decoration: none;
     color: white;
+    font-size: 12px;
 }
 
 .loginBox__label hr{
     width: 100%;
     margin-left: 6px;
+    background: #ffb100;
+    border: 1px solid #ffb100;
 }
 
-.loginBox input[type=text], .loginBox input[type=password]{
+.loginBox input[type=text], 
+.loginBox input[type=password] {
     width: 100%;
-    height: 41px;
+    height: 40px;
     outline: none;
     border: none;
     background-color: transparent;
-    font-size: 29px;
+    font-size: 20px;
     color: white;
     font-family: Poppins;
     margin-bottom: 40px;
+}
+
+.loginBox input[type=text]::placeholder,
+.loginBox input[type=password]::placeholder {
+    opacity: .5;
 }
 
 .loginBox__checkbox{
@@ -71,6 +87,8 @@
     justify-content: flex-start;
     width: 100%;
     color: white;
+    margin: auto;
+    background: transparent;
 }
 
 .loginBox__checkbox{
@@ -82,10 +100,56 @@
 }
 
 .loginBox__checkbox__checkLabel{
-    margin-left: 10px;
-    font-size: 19px;
+    font-size: 12px;
 }
 
 .loginBox input::placeholder{
     color: white;
 }
+  
+input[type="checkbox"] { 
+      display: none; 
+}
+  
+  input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Poppins';
+    color: white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+input[type="checkbox"] + label:last-child { 
+      margin-bottom: 0; 
+}
+  
+  input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6cc0e5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+  }
+  
+  input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

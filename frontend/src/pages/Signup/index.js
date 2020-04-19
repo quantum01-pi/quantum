@@ -13,16 +13,16 @@ export default function SignUp() {
             <div className="loginBox">
                 <Logo/>
                 <label htmlFor="usuario" className="loginBox__label">Usuário <hr></hr></label>
-                <i/><input type="text" placeholder="Usuário" id="usuario" name="usuario"/>
+                <i/><input type="text" placeholder="ex: adam_voland" id="usuario" name="usuario"/>
 
                 <label htmlFor="senha" className="loginBox__label">Senha <hr></hr></label>
-                <i/><input type="password" name="senha" placeholder="Senha" id="senha"/>
+                <i/><input type="password" name="senha" placeholder="ex: U29c@l" id="senha"/>
 
                 <div className="loginBox__checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox"/>
                     <label htmlFor="checkbox" className="loginBox__checkbox__checkLabel">Continuar conectado</label>
                 </div>
-                <button className="loginBox__button">ENTRAR</button>
+                <button className="loginBox__button">Entrar</button>
                 <a href="#" className="loginBox__esqueceuSenha">Esqueceu a senha?</a>
             </div>
         </div>

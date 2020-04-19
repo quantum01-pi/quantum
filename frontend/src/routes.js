@@ -16,9 +16,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home/>
-            <Search/>
           </Route>
           <Route exact path="/auth" component={SignUp}/>
+          <Route exact path="/search" component={Search}/>
         </Switch>
     </Router>
   );
