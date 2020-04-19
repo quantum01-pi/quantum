@@ -1,0 +1,91 @@
+.bg-auth{
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    filter: blur(30px);
+    max-height: 100vh;
+}
+
+.loginBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.loginBox__button{
+    width: 100%;
+    background-color: #FFFFFF;
+    outline: none;
+    margin: none;
+    border: none;
+    height: 60px;
+    font-size: 32px;
+    font-family: poppins;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+
+.loginBox__label{
+    font-size: 13px;
+    display: flex;
+    width: 100%;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.loginBox__label:first-of-type{
+    margin-top: 50px;
+}
+
+.loginBox__esqueceuSenha{
+    text-decoration: none;
+    color: white;
+}
+
+.loginBox__label hr{
+    width: 100%;
+    margin-left: 6px;
+}
+
+.loginBox input[type=text], .loginBox input[type=password]{
+    width: 100%;
+    height: 41px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 29px;
+    color: white;
+    font-family: Poppins;
+    margin-bottom: 40px;
+}
+
+.loginBox__checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    color: white;
+}
+
+.loginBox__checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    color: white;
+}
+
+.loginBox__checkbox__checkLabel{
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+.loginBox input::placeholder{
+    color: white;
+}
