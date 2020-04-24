@@ -1,0 +1,4 @@
+mysql_host: 'projeto-db.cy6iplei0dnz.us-east-2.rds.amazonaws.com'
+mysql_user: 'admin'
+mysql_password: 'qunatum2020'
+mysql_db: 'quantum'
