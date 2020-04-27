@@ -14,7 +14,7 @@ const Search = (props) => {
     const updateValue = (event) => {
         const value = event.target.value;
         setValue(value);
-        // props.onChange(value);
+        props.onChange(value);
     };
 
     return(
