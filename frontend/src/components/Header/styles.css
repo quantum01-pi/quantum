@@ -15,4 +15,9 @@
     font-weight: 300;
     text-decoration: none;
     color: #FFFFFF;
+    transition: .2s ease;
+}
+
+.header__link:hover {
+    color: #1ae2ce;
 }
