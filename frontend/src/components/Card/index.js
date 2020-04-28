@@ -7,7 +7,13 @@ import Save from '../../components/Save/index'
 
 
 
-export default function Card() {
+export default function Card(
+    {categoria="Grãos",
+    nome="Arroz Integral",
+    descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    carga="400kg",
+    local="Vila do encontro"}
+) {
     return (
         <div className="card">
             <div className="card__header">
@@ -15,10 +21,10 @@ export default function Card() {
                 <a className="card__gallery">Ver imagens</a>
             </div>
             <div>
-                <small className="card__category"><a>Grãos</a> em <strong>Vila do Encontro</strong></small>
-                <h2 className="card__title">Arroz Integral 400kg</h2>
-                <p className="card__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p className="card__caption"><span><strong>Carga:</strong></span> 400kg</p>
+            <small className="card__category"><a>{categoria}</a> em <strong>{local}</strong></small>
+                <h2 className="card__title">{nome} {carga}</h2>
+                <p className="card__caption">{descricao}</p>
+                <p className="card__caption"><span><strong>Carga:</strong></span> {carga}</p>
                 <Button>Solicitar contato</Button>
             </div>
         </div>

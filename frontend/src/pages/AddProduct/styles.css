@@ -1,0 +1,125 @@
+.bg-auth {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    filter: blur(30px) saturate(2);
+    max-height: 100vh;
+}
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form{
+    width: 100%;
+}
+
+
+.productForm__button {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 3px solid white;
+    font-size: 25px;
+    padding: 10px;
+    font-family: poppins;
+    margin-bottom: 18px;
+    margin-top: 30px;
+    color: white;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.productForm__button:hover {
+    background-color: white;
+    color: #222;
+}
+
+.productForm__label { 
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    color: #ffb100;
+}
+
+.productForm__label:first-of-type{
+    margin-top: 50px;
+}
+
+.productForm__esqueceuSenha{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.productForm__label hr{
+    width: 100%;
+    margin-left: 6px;
+    background: #ffb100;
+    border: 1px solid #ffb100;
+}
+
+.productForm input[type=text], 
+.productForm input[type=date],
+.productForm input[type=number] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    font-family: Poppins;
+    margin-bottom: 40px;
+}
+
+.productForm input[type=text]::placeholder,
+.productForm input[type=number]::placeholder {
+    opacity: .5;
+}
+
+.productForm input[type=date]{
+    color: rgba(255,255,255,1);
+    outline: none;
+    border: none;
+    font-family: Poppins;
+}
+
+#quantidade{
+    width: 70%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+}
+
+.productForm__qtd{
+    display: flex;
+    align-items: center;
+}
+
+.productForm__qtd select{
+    margin-bottom: 40px;
+    width: 30%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    font-family: Poppins;
+}
+
+.productForm__qtd option{
+    color: #222;
+}

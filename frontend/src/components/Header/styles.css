@@ -21,3 +21,30 @@
 .header__link:hover {
     color: #1ae2ce;
 }
+
+.header__submenu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menuList{
+    position: absolute;
+    top: 100px;
+    background-color: #222;
+    width: 237px;
+    display: none;
+}
+
+.menuList li{
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.menuList li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menuList li:first-of-type{
+    margin-top: 20px;
+}

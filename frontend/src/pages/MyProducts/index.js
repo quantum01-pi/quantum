@@ -10,20 +10,21 @@ import useUser from '../../hooks/useUser'
 
 
 
-export default function SearchPage() {
+export default function MyProducts() {
     const [produtos,setProdutos] = useState([]);
     const user                   = useUser();
 
     async function getProducts(){
         const req = await api.get('/produto');
-        let list = req.data.filter((item)=>item.usuario_id_usuario!=user.getId())
+        const userId = user.getId();
+        let list = req.data.filter((item)=>item.usuario_id_usuario===parseInt(userId))
         setProdutos(list);
     }
 
     useEffect(() => {
         getProducts();
     }, [])
-    
+
     return (
         <>
             <div className="container">
