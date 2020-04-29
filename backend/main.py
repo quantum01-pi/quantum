@@ -113,7 +113,7 @@ def atualizar_produto():
 
 		if _id_produto and _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and request.method == 'POST':			
 			sqlQuery = "UPDATE produto WHERE id_produto '%s' (nome_produto, quantidade, tipo_qtd, usuario_id_usuario, validade) VALUES(%s, %s, %s, %s, %s)"
-			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade)
+			bindData = (_id_produto, _nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade)
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			cursor.execute(sqlQuery, bindData)

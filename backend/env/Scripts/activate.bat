@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\yuri_\OneDrive\Documents\GitHub\quantum\backend\env"
+set "VIRTUAL_ENV=C:\Users\Murillo\Documents\GitHub\quantum\backend\env"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
