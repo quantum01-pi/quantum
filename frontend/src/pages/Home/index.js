@@ -26,10 +26,6 @@ export default function Home() {
                     <img src={Laranja} alt=""/>
                     <img src={Graos} alt=""/>
                 </section>
-                
-                <Card>
-                </Card>
-
                 <Footer/>
             </div>
         </>
