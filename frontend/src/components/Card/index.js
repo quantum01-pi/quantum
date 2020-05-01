@@ -21,11 +21,10 @@ export default function Card(
 
 ) {
 
-    const [mounted, setMounted] = useState(false);
+    const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        console.log("passou");
-
+        console.log("Passou");
     });
     
     const toggle = () => setMounted(!mounted);
@@ -33,7 +32,7 @@ export default function Card(
     return (
         
         <div className="card">
-            {toggle == true ?
+            { mounted == true ?
 
         <>
         <div className="card__header">
@@ -47,7 +46,6 @@ export default function Card(
             <p className="card__caption">{descricao}</p>
             <p className="card__caption"><span><strong>Carga:</strong></span> {carga}</p>
             <Button>Solicitar contato</Button>
-            <a onClick={toggle} className="card__gallery">Voltar</a>
         </div>
         </>
          : <Gallery></Gallery> 
