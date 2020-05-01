@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './styles.css'
 
 import Slider from "react-slick";
-
+import "slick-carousel/slick/slick.css"; 
 
 export default class Gallery extends Component {
     render() {
@@ -10,12 +10,14 @@ export default class Gallery extends Component {
         const settings = {
             className: "center",
             infinite: true,
+            dots: true,
             centerPadding: "60px",
-            slidesToShow: 5,
+            slidesToShow: 1,
             swipeToSlide: true,
+            slidesToScroll: 1,
             afterChange: function(index) {
               console.log(
-                `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+                `Slider mudou para: ${index + 1}`
               );
             }
         };
@@ -24,10 +26,13 @@ export default class Gallery extends Component {
 
             <Slider {...settings}>
                 <div>
-                    <h1>1</h1>
+                    <img src="https://i.picsum.photos/id/11/400/400.jpg"></img>
                 </div>
                 <div>
-                    <h1>2</h1>
+                    <img src="https://i.picsum.photos/id/21/400/400.jpg"></img>
+                </div>
+                <div>
+                    <img src="https://i.picsum.photos/id/23/400/400.jpg"></img>
                 </div>
             </Slider>
         )
