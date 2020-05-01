@@ -9,8 +9,6 @@ import Save from '../../components/Save/index'
 
 export default function Card(
 
-    visible,
-
     {     
         categoria="Grãos",
         nome="Arroz Integral",
@@ -24,7 +22,7 @@ export default function Card(
     const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        console.log("Passou");
+        
     });
     
     const toggle = () => setMounted(!mounted);
@@ -36,8 +34,8 @@ export default function Card(
 
         <>
         <div className="card__header">
-        <Save></Save>
-        <a onClick={toggle} className="card__gallery">Ver imagens</a>
+            <Save></Save>
+            <a onClick={toggle} className="card__gallery">Ver imagens</a>
         </div>
 
         <div>

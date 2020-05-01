@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import './styles.css'
 
 import Slider from "react-slick";
