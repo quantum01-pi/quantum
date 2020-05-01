@@ -3,7 +3,7 @@ import './styles.css';
 
 export default function Logo({path = "/"}) {
     return (
-        <a class="logo__link" href={path}>
+        <a className="logo__link" href={path}>
             <svg xmlns="http://www.w3.org/2000/svg" width="200" className="logo" height="66.507" viewBox="0 0 339.18 66.507">
                 <g id="Grupo_2292" data-name="Grupo 2292" transform="translate(-361.851 -301.218)">
                     <path id="Caminho_2379" data-name="Caminho 2379" d="M459.258,356.317a15.745,15.745,0,0,1-6.592-6.989,24.739,24.739,0,0,1-2.267-11.05V303.218h7.707v35.324q0,6.006,3.022,9.294t8.538,3.286q5.553,0,8.595-3.286t3.041-9.294V303.218h7.707v35.059a24.737,24.737,0,0,1-2.267,11.05,15.72,15.72,0,0,1-6.611,6.989,23.9,23.9,0,0,1-20.873,0Z" transform="translate(-39.738 -0.898)" fill="#fff"/>

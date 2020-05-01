@@ -9,6 +9,7 @@
 }
 
 .card {
+    position: relative;
     margin: 10px;
     padding: 40px;
     max-width: 260px;

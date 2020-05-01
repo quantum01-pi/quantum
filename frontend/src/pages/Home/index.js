@@ -10,6 +10,9 @@ import Celular from '../../assets/img/recursos.png'
 import Graos from '../../assets/img/graos.jpg'
 import Feira from '../../assets/img/feira.jpg'
 
+import Card from '../../components/Card'
+import Gallery from '../../components/Gallery'
+
 export default function Home() {
     return (
         <>
@@ -24,6 +27,10 @@ export default function Home() {
                     <img src={Laranja} alt=""/>
                     <img src={Graos} alt=""/>
                 </section>
+                
+                <Card>
+                </Card>
+
                 <Footer/>
             </div>
         </>
