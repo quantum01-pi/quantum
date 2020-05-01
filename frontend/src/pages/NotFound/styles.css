@@ -8,12 +8,13 @@
 .notfound__title {
     color: #00bcd4;
     font-size: 1.5em;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
 .notfound__caption {
     color: #fafafa;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .notfound__link {
