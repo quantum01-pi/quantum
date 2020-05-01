@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='C:\Users\yuri_\OneDrive\Documents\GitHub\quantum\backend\env'
+VIRTUAL_ENV='C:\Users\Murillo\Documents\GitHub\quantum\backend\env'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

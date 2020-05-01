@@ -4,6 +4,7 @@ import './styles.css'
 // import Gallery from '../Gallery/index'
 import Button from '../../components/Button/index'
 import Save from '../../components/Save/index'
+import Gallery from '../Gallery'
 
 
 
@@ -27,6 +28,7 @@ export default function Card(
                 <p className="card__caption"><span><strong>Carga:</strong></span> {carga}</p>
                 <Button>Solicitar contato</Button>
             </div>
+            {/* <Gallery></Gallery> */}
         </div>
     )
 }
