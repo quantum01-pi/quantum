@@ -6,8 +6,8 @@ try:
 		smtpObj = smtplib.SMTP('smtp.outlook.com', 587)
 		smtpObj.ehlo()
 		smtpObj.starttls()
-		msgTo = 'xxxxx@outlook.com'
-		toPass = 'senhaxxxx'
+		msgTo = 'quantum01.pi@gmail.com'
+		toPass = 'usjt@123'
 		smtpObj.login(msgTo, toPass)
 		msg = '''
 		Mensagem do E-mail
