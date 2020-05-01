@@ -1,0 +1,30 @@
+.content {
+    width: 340px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.notfound__title {
+    color: #00bcd4;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.notfound__caption {
+    color: #fafafa;
+    margin-bottom: 60px;
+}
+
+.notfound__link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 20px;
+    transition: .5s ease;
+}
+
+.notfound__link:hover {
+    color: #000;
+    background-color: white;
+}

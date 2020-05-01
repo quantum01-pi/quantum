@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+
 import Header from '../../components/Header/index'
 import Footer from '../../components/Footer/index'
 import BannerHome from '../../assets/img/bannerHome.png'
