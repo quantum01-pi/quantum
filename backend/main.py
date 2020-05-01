@@ -18,7 +18,7 @@ def add_usuario():
 			cursor = conn.cursor()
 			cursor.execute(sqlQuery, bindData)
 			conn.commit()
-			_result = jsonify({'description': 'Cadastrado com sucesso'})
+			_result = jsonify({'description': 'Cadastrado com sucesso', 'id': cursor.lastrowid, 'email': _email})
 			response = _result
 			response.status_code = 200
 			return response
@@ -100,7 +100,7 @@ def lista_produto():
 		cursor.close() 
 		conn.close()
 
-@app.route('/produto/atualizar', methods=['POST'])
+@app.route('/produto/atualizar', methods=['PUT'])
 def atualizar_produto():
 	try:
 		_json = request.json
@@ -111,9 +111,10 @@ def atualizar_produto():
 		_validade = _json['validade']
 		_usuario_id_usuario = _json['usuario_id_usuario']
 
-		if _id_produto and _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and request.method == 'POST':			
-			sqlQuery = "UPDATE produto WHERE id_produto '%s' (nome_produto, quantidade, tipo_qtd, usuario_id_usuario, validade) VALUES(%s, %s, %s, %s, %s)"
-			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade)
+		if _id_produto and _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and _id_produto and request.method == 'PUT':			
+			sqlQuery = "UPDATE produto SET nome_produto = %s, quantidade = %s, tipo_qtd = %s, usuario_id_usuario = %s, validade = %s WHERE id_produto = %s"
+			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade, _id_produto)
+			print(sqlQuery)
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			cursor.execute(sqlQuery, bindData)
@@ -129,7 +130,51 @@ def atualizar_produto():
 	finally:
 		cursor.close() 
 		conn.close()	
-	
+
+
+@app.route('/usuarios/atualizar/', methods=['PUT'])
+def atualizar_usuario():
+	try:
+		_json = request.json
+		_id_usuario = _json['id']
+		_email = _json['email']
+		_senha = _json['senha']
+
+		if  _email and _senha and _id_usuario and request.method == 'PUT':			
+			sqlQuery = "UPDATE usuario SET email = %s, senha = %s WHERE id_usuario = %s"
+			bindData = (_email, _senha, _id_usuario)
+			conn = mysql.connect()
+			cursor = conn.cursor()
+			cursor.execute(sqlQuery, bindData)
+			conn.commit()
+			_result = jsonify({'description': 'Atualizado com sucesso', 'id': _id_usuario, 'email': _email })
+			response = _result
+			response.status_code = 200
+			return response
+		else:
+			return not_found()
+	except Exception as e:
+		print(e)
+	finally:
+		cursor.close() 
+		conn.close()	
+
+
+@app.route('/deletar/<int:id>', methods=['DELETE'])
+def delete_emp(id):
+	try:
+		conn = mysql.connect()
+		cursor = conn.cursor()
+		cursor.execute("DELETE FROM usuario WHERE id_usuario =%s", (id,))
+		conn.commit()
+		respone = jsonify('Usuário deletado com sucesso')
+		respone.status_code = 200
+		return respone
+	except Exception as e:
+		print(e)
+	finally:
+		cursor.close() 
+		conn.close()
 
 if __name__ == "__main__":
     app.run()
