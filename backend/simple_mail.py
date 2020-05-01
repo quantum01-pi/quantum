@@ -2,11 +2,12 @@ import smtplib
 
 try:
 		msgFrom = str(input("Informe o e-mail de destino: "))
+		#codigo configura para servidor outlook
 		smtpObj = smtplib.SMTP('smtp.outlook.com', 587)
 		smtpObj.ehlo()
 		smtpObj.starttls()
-		msgTo = 'msiuri@outlook.com'
-		toPass = 'iuri2011'
+		msgTo = 'xxxxx@outlook.com'
+		toPass = 'senhaxxxx'
 		smtpObj.login(msgTo, toPass)
 		msg = '''
 		Mensagem do E-mail
