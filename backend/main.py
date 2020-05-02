@@ -64,10 +64,11 @@ def add_produto():
 		_quantidade = _json['quantidade']
 		_tipo_qtd = _json['tipo_qtd']
 		_validade = _json['validade']
+		_descricao = _json['descricao']
 		_usuario_id_usuario = _json['usuario_id_usuario']
-		if _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and request.method == 'POST':			
-			sqlQuery = "INSERT INTO produto(nome_produto, quantidade, tipo_qtd, usuario_id_usuario, validade) VALUES(%s, %s, %s, %s, %s)"
-			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade)
+		if _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and _descricao and request.method == 'POST':			
+			sqlQuery = "INSERT INTO produto(nome_produto, quantidade, tipo_qtd, usuario_id_usuario, validade, descricao) VALUES(%s, %s, %s, %s, %s, %s)"
+			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade, _descricao)
 			conn = mysql.connect()
 			cursor = conn.cursor()
 			cursor.execute(sqlQuery, bindData)
@@ -109,11 +110,12 @@ def atualizar_produto():
 		_quantidade = _json['quantidade']
 		_tipo_qtd = _json['tipo_qtd']
 		_validade = _json['validade']
+		_descricao = _json['descricao']
 		_usuario_id_usuario = _json['usuario_id_usuario']
 
-		if _id_produto and _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and _id_produto and request.method == 'PUT':			
-			sqlQuery = "UPDATE produto SET nome_produto = %s, quantidade = %s, tipo_qtd = %s, usuario_id_usuario = %s, validade = %s WHERE id_produto = %s"
-			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade, _id_produto)
+		if _id_produto and _nome_produto and _quantidade and _tipo_qtd and _usuario_id_usuario and _validade and _descricao and request.method == 'PUT':			
+			sqlQuery = "UPDATE produto SET nome_produto = %s, quantidade = %s, tipo_qtd = %s, usuario_id_usuario = %s, descricao = %s, validade = %s WHERE id_produto = %s"
+			bindData = (_nome_produto, _quantidade, _tipo_qtd, _usuario_id_usuario, _validade, _id_produto, _descricao)
 			print(sqlQuery)
 			conn = mysql.connect()
 			cursor = conn.cursor()

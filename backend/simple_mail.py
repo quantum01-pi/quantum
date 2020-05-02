@@ -1,9 +1,9 @@
 import smtplib
 
 try:
-		msgFrom = str(input("Informe o e-mail de destino: "))
+		msgFrom = str(input("Informe o e-mail de destino: murillobilchesnavarro@gmail.com"))
 		#codigo configura para servidor outlook
-		smtpObj = smtplib.SMTP('smtp.outlook.com', 587)
+		smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
 		smtpObj.ehlo()
 		smtpObj.starttls()
 		msgTo = 'quantum01.pi@gmail.com'
@@ -13,9 +13,9 @@ try:
 		Mensagem do E-mail
 
 
-        Teste att iuri
+        Teste att Quantum
 		'''
-		smtpObj.sendmail(msgTo,msgFrom,'Subject: Teste Pica\n{}'.format(msg))
+		smtpObj.sendmail(msgTo,msgFrom,'Subject: Teste\n{}'.format(msg))
 		smtpObj.quit()
 		print("Email enviado com sucesso!")
 except:
