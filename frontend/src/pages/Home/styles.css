@@ -64,3 +64,59 @@ body {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(0deg, #222 0%, #555 100%);
 }
+
+.video {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    display: block;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    top: 0;
+    z-index: 2;
+}
+
+.video__caption {
+    color: white;
+    position: absolute;
+    font-weight: 100;
+    top: 50%;
+    right: 70%;
+    z-index: 1;
+    width: 460px;
+    transform: translate(50%,-50%);
+}
+
+.video__caption h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 6em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: white;
+    margin-bottom: 20px;
+    line-height: .8;
+}
+
+.video__caption strong {
+    font-weight: bold;
+}
+
+.video__caption p {
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.video__caption p:first-of-type {
+    margin-bottom: 20px;
+}
+
+.bigplaybutton {
+    opacity: 0!important;
+}
+
+.video-react-control-bar {
+    display: none!important;
+}

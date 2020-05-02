@@ -14,7 +14,9 @@
     "react-slick": "^0.25.2",
     "react-toastify": "^5.5.0",
     "reactstrap": "^8.4.1",
-    "slick-carousel": "^1.8.1"
+    "redux": "^4.0.5",
+    "slick-carousel": "^1.8.1",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",

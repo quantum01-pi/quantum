@@ -1,3 +1,8 @@
 .logo {
     padding: 10px;
+    transition: .5s ease;
 }
+
+/* .path:hover {
+    fill: red;
+} */
