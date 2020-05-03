@@ -13,6 +13,8 @@ import Graos from '../../assets/img/graos.jpg'
 import Feira from '../../assets/img/feira.jpg'
 import Agro from '../../assets/img/agro.mp4'
 
+import Card from '../../components/Card'
+
 
 export default function Home() {
     return (

@@ -21,11 +21,14 @@ export default function Card(
 
     const [mounted, setMounted] = useState(true);
 
-    useEffect(() => {
-        
-    });
+    useEffect(() => {});
     
-    const toggle = () => setMounted(!mounted);
+    const toggle = () => {
+        return setMounted (
+            !mounted,
+        );
+    };
+    
 
     return (
         

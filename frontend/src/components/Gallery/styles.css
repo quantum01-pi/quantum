@@ -31,6 +31,7 @@
     border: none;
     text-indent: -9999px;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .slick-prev {
@@ -46,6 +47,7 @@
     transform: translate(50%,-50%);
     transition: .2s ease;
     cursor: pointer;
+    z-index: 2;
 }
 
 .slick-dots li {
@@ -86,4 +88,23 @@
 .slick-dots .slick-active:hover {
     background-color: white;
     border: 1px solid white;
+}
+
+
+.gallery__back {
+    z-index: 1;
+    color: white;
+    position: absolute;
+}
+
+.gallery__overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translate(50%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }

@@ -1,10 +1,11 @@
-import React, { Component} from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import './styles.css'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 
 export default class Gallery extends Component {
+
     render() {
 
         const settings = {
@@ -23,18 +24,22 @@ export default class Gallery extends Component {
         };
 
         return(
-
-            <Slider {...settings}>
+            <div>
+                <Slider {...settings}>
+                    <div>
+                        <img src="https://i.picsum.photos/id/11/400/400.jpg"></img>
+                    </div>
+                    <div>
+                        <img src="https://i.picsum.photos/id/21/400/400.jpg"></img>
+                    </div>
+                    <div>
+                        <img src="https://i.picsum.photos/id/23/400/400.jpg"></img>
+                    </div>
+                </Slider>
                 <div>
-                    <img src="https://i.picsum.photos/id/11/400/400.jpg"></img>
+                    <a className="gallery__back">Voltar</a>
                 </div>
-                <div>
-                    <img src="https://i.picsum.photos/id/21/400/400.jpg"></img>
-                </div>
-                <div>
-                    <img src="https://i.picsum.photos/id/23/400/400.jpg"></img>
-                </div>
-            </Slider>
+            </div>
         )
     }
 }
