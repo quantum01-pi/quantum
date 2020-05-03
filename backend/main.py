@@ -4,6 +4,7 @@ from config import mysql
 from flask import jsonify
 from flask import flash, request
 import json
+import smtplib
 
 @app.route('/usuarios/adicionar', methods=['POST'])
 def add_usuario():
@@ -177,6 +178,27 @@ def delete_emp(id):
 	finally:
 		cursor.close() 
 		conn.close()
+
+@app.route('/email', methods=['POST'])
+def envia_email():
+	try:
+		msgFrom = str(input("Informe o e-mail de destino: "))
+		#codigo configura para servidor outlook
+		smtpObj = smtplib.SMTP('smtp.outlook.com', 587)
+		smtpObj.ehlo()
+		smtpObj.starttls()
+		msgTo = 'quantum01.pi@outlook.com'
+		toPass = 'usjt@123'
+		smtpObj.login(msgTo, toPass)
+		msg = '''
+		Mensagem do E-mail projeto Quantum.
+
+		'''
+		smtpObj.sendmail(msgTo,msgFrom,'Subject: Notificação Quantum.\n{}'.format(msg))
+		smtpObj.quit()
+		print("Email enviado com sucesso!")
+	except:
+		print("Erro ao enviar e-mail")
 
 if __name__ == "__main__":
     app.run()
