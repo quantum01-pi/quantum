@@ -3,6 +3,8 @@
     transition: .5s ease;
 }
 
-/* .path:hover {
-    fill: red;
-} */
+@media only screen and (max-width: 600px) {
+    .logo {
+        padding: 0;
+    }
+}
