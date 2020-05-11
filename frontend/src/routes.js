@@ -12,6 +12,7 @@ import SignUp from './pages/Signup/index'
 import SignIn from "./pages/Signin/index";
 import AddProduct from "./pages/AddProduct"
 import MyProducts from "./pages/MyProducts"
+import NotFound from "./pages/NotFound"
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route exact path="/search" component={Search}/>
           <Route exact path="/addProduct" component={AddProduct}/>
           <Route exact path="/myProducts" component={MyProducts}/>
+          <Route exact path="*" component={NotFound}/>
         </Switch>
     </Router>
   );
